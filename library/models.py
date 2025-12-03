@@ -84,6 +84,8 @@ class InsuranceClaimAndLoan(models.Model):
         verbose_name="Voucher Number"
     )
 
+    lock = models.BooleanField(default=False, help_text="Tick this field if this submission if final")
+
     # Document Uploads
     claim_document = models.FileField(
         upload_to='claims/documents/%Y/%m/',
